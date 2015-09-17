@@ -1,15 +1,22 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app = "phoneApp">
 <head>
-    <meta charset="utf-8">
-    <title>Phone App</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="app/css/app.css">
-    <script src="bower_components/angular/angular.js"></script>
+  <meta charset="utf-8">
+  <title>Phone App</title>
+  <link rel="stylesheet"
+        href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app/css/app.css">
+  <script src="bower_components/angular/angular.js"></script>
 </head>
-<body>
+<body ng-controller="PhoneListCtrl">
 
-<p>Nothing here {{'yet' + '!'}}</p>
+<ul>
+    <li ng-repeat="phone in phones">
+<span>{{phone.name}}</span>
 
+<p>{{phone.snippet}}</p>
+</li>
+</ul>
+<script src="app/module/controller.js"></script>
 </body>
 </html>

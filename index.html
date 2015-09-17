@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app = "phoneApp">
+<html lang="en" ng-app="phoneApp">
 <head>
   <meta charset="utf-8">
   <title>Phone App</title>
@@ -9,14 +9,27 @@
   <script src="bower_components/angular/angular.js"></script>
 </head>
 <body ng-controller="PhoneListCtrl">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
 
-<ul>
-    <li ng-repeat="phone in phones">
-<span>{{phone.name}}</span>
+      Search: <input ng-model="query">
 
-<p>{{phone.snippet}}</p>
-</li>
-</ul>
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="phone in phones | filter:query">
+          {{phone.name}}
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
 <script src="app/module/controller.js"></script>
 </body>
 </html>

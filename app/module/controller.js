@@ -1,13 +1,8 @@
 angular
   .module('phoneApp', [])
-  .controller('PhoneListCtrl', function ($scope) {
-  $scope.phones = [
-    {'name': 'Nexus S',
-      'snippet': 'Fast just got faster with Nexus S.'},
-    {'name': 'Motorola XOOM\u2122 with Wi-Fi',
-      'snippet': 'The Next, Next Generation tablet.'},
-    {'name': 'MOTOROLA XOOM\u2122',
-      'snippet': 'The Next, Next Generation tablet.'}
-  ];
+  .controller('PhoneListCtrl', function ($scope, $http) {
+    $http.get('app/data/phones.json').success(function(data) {
+      $scope.phones = data;
+    });
     $scope.orderProp = 'age';
 });

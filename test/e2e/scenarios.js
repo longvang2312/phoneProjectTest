@@ -11,7 +11,7 @@ describe('Phone App', function () {
       var phoneList = element.all(by.repeater('phone in phones'));
       var query = element(by.model('query'));
 
-      expect(phoneList.count()).toBe(3);
+      expect(phoneList.count()).toBe(20);
 
       query.sendKeys('nexus');
       expect(phoneList.count()).toBe(1);
@@ -19,7 +19,7 @@ describe('Phone App', function () {
 
       query.clear();
       query.sendKeys('motorola');
-      expect(phoneList.count()).toBe(2);
+      expect(phoneList.count()).toBe(8);
 
     });
 

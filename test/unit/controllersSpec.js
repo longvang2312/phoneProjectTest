@@ -1,11 +1,11 @@
 'use strict';
 
 /* jasmine specs for controllers go here */
-describe('PhoneApp controller', function () {
+describe('controller', function () {
 
   describe('PhoneListCtrl', function () {
     var scope, ctrl, $httpBackend;
-    beforeEach(module('phoneApp'));
+    beforeEach(module('phoneAppController'));
 
     beforeEach(inject(function (_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;

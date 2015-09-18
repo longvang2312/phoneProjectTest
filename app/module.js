@@ -1,8 +1,8 @@
 angular
-    .module('phoneApp', [
-        'ngRoute',
-        'phoneAppController'
-        ]);
+  .module('phoneApp', [
+    'ngRoute',
+    'phoneAppController'
+  ]);
 
 
 
